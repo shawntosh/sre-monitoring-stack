@@ -16,22 +16,17 @@ It includes complete integration between **HAProxy**, **Prometheus**, **Grafana*
 ---
 
 ## ⚙️ Folder Structure
-sre-stack/
-├── haproxy/
-│ └── haproxy.cfg
-├── prometheus/
-│ └── prometheus.yml
-├── grafana/
-│ └── dashboards/
-├── haproxy_exporter/
-├── scripts/
-│ ├── start_monitoring.sh
-│ └── check_status.sh
-└── README.md
 
- #yaml
  ## ▶️ Usage
 Start all services:
 ```bash
 cd scripts
 ./start_monitoring.sh
+
+## Project Screenshots
+
+### HAProxy Dashboard
+![HAProxy](HAproxy.png)
+
+### Grafana Dashboard
+![Grafana](Grafana.png)
