@@ -26,7 +26,8 @@ cd scripts
 ## Project Screenshots
 
 ### HAProxy Dashboard
-![HAProxy](HAproxy.png)
+<img src="HAproxy.png" alt="HAProxy Dashboard" width="100%">
 
 ### Grafana Dashboard
-![Grafana](Grafana.png)
+<img src="Grafana.png" alt="Grafana Dashboard" width="100%">
+
