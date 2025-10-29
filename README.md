@@ -51,32 +51,3 @@ cd scripts
 # Check services status
 ./check_status.sh
 
-
-Open your browser to access:
-
-HAProxy: http://localhost:8404
-
-HAProxy Exporter: http://localhost:9101/metrics
-
-Prometheus: http://localhost:9090
-
-Grafana: http://localhost:3000
-
-🖼 Project Screenshots
-HAProxy Dashboard
-<p align="center"> <img src="./HAproxy.png" alt="HAProxy Dashboard" width="80%"> </p>
-Grafana Dashboard
-<p align="center"> <img src="./Grafana.png" alt="Grafana Dashboard" width="80%"> </p>
-🔧 Features
-
-Real-time metrics for frontend & backend traffic
-
-Monitor error rates (4xx/5xx)
-
-Observe latency and response times
-
-Track session counts per backend server
-
-Ready-to-use Grafana dashboards
-
-Clean scripts for starting & checking services
