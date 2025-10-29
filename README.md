@@ -26,8 +26,12 @@ cd scripts
 ## Project Screenshots
 
 ### HAProxy Dashboard
-<img src="HAproxy.png" alt="HAProxy Dashboard" width="100%">
+<p align="center">
+  <img src="HAproxy.png" alt="HAProxy Dashboard" width="80%">
+</p>
 
 ### Grafana Dashboard
-<img src="Grafana.png" alt="Grafana Dashboard" width="100%">
+<p align="center">
+  <img src="Grafana.png" alt="Grafana Dashboard" width="80%">
+</p>
 
