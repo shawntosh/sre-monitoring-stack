@@ -1,0 +1,55 @@
+version: "3.8"
+
+services:
+  haproxy:
+    build: ./config/haproxy
+    container_name: haproxy
+    ports:
+      - "80:80"
+      - "8404:8404"
+    networks:
+      - sre_net
+
+  haproxy-exporter:
+    image: prom/haproxy-exporter:latest
+    container_name: haproxy-exporter
+    command:
+      - --haproxy.scrape-uri=http://haproxy:8404/stats;csv
+    ports:
+      - "9101:9101"
+    depends_on:
+      - haproxy
+    networks:
+      - sre_net
+
+  prometheus:
+    build: ./config/prometheus
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - prometheus_data:/prometheus
+    depends_on:
+      - haproxy-exporter
+    networks:
+      - sre_net
+
+  grafana:
+    build: ./config/grafana
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+    depends_on:
+      - prometheus
+    networks:
+      - sre_net
+
+volumes:
+  grafana_data:
+  prometheus_data:
+
+networks:
+  sre_net:
+    driver: bridge
