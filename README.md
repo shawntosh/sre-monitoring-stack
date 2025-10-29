@@ -10,8 +10,17 @@
 
 ---
 
-A **production-style monitoring stack** for practicing **DevOps and SRE workflows**.  
-Fully integrated **HAProxy, Prometheus, Grafana**, and **HAProxy Exporter**.
+## 🐳 Containerized SRE Monitoring Stack
+
+This stack includes:
+- **HAProxy** (Load Balancer)
+- **HAProxy Exporter** (Metrics)
+- **Prometheus** (Monitoring)
+- **Grafana** (Visualization)
+
+### Run Everything
+```bash
+docker-compose up -d --build
 
 ---
 
@@ -34,15 +43,5 @@ cd scripts
 
 # Check services status
 ./check_status.sh
-
-## 🔧 Features
-
-- Real-time metrics for frontend & backend traffic  
-- Monitor error rates (4xx/5xx)  
-- Observe latency and response times  
-- Track session counts per backend server  
-- Ready-to-use Grafana dashboards  
-- Clean scripts for starting & checking services
-
  
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
